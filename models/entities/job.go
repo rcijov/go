@@ -1,4 +1,4 @@
-package models
+package entities
 
 type Job struct {
     title string

@@ -1,11 +1,24 @@
-package models
+package entities
+
+import (
+	"time"
+)
 
 type Account struct {
     name string
     email string
     phone string
     password string
-    dateCreated string
+    dateCreated time.Time
+}
+
+// Set Account
+func (f *Account) SetAcc(name string, email string, phone string, password string, datecreated time.Time) {
+    f.name = name
+    f.email = email
+    f.phone = phone
+    f.password = password
+    f.dateCreated = datecreated
 }
 
 // SetName Account
@@ -48,13 +61,13 @@ func (f Account) GetPassword() string {
     return f.password
 }
 
-// SetdateCreated Account
-func (f *Account) SetDateCreated(dateCreated string){
-    f.dateCreated = dateCreated
+// SetDateCreated Account
+func (f *Account) SetDateCreated(date time.Time){  
+     f.dateCreated = date
 }
 
-// GetPassword Account
-func (f Account) GetDateCreated() string {
+// GetDateCreated Account
+func (f Account) GetDateCreated() time.Time {
     return f.dateCreated
 }
 
