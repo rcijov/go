@@ -5,69 +5,80 @@ import (
 )
 
 type Account struct {
-    name string
-    email string
-    phone string
-    password string
-    dateCreated time.Time
+    Name string
+    Email string
+    Phone string
+    Password string
+    Type string
+    Date time.Time
 }
 
 // Set Account
-func (f *Account) SetAcc(name string, email string, phone string, password string, datecreated time.Time) {
-    f.name = name
-    f.email = email
-    f.phone = phone
-    f.password = password
-    f.dateCreated = datecreated
+func (f *Account) SetAcc(name string, email string, phone string, password string, typez string, datecreated time.Time) {
+    f.Name = name
+    f.Email = email
+    f.Phone = phone
+    f.Password = password
+    f.Type = typez
+    f.Date = datecreated
 }
 
 // SetName Account
 func (f *Account) SetName(name string) {
-    f.name = name
+    f.Name = name
 }
 
 // GetName Account
 func (f Account) GetName() string {
-    return f.name
+    return f.Name
 }
 
 // SetEmail Account
 func (f *Account) SetEmail(email string){
-    f.email = email
+    f.Email = email
 }
 
 // GetEmail Account
 func (f Account) GetEmail() string {
-    return f.email
+    return f.Email
 }
 
 // SetPhone Account
 func (f *Account) SetPhone(phone string){
-    f.phone = phone
+    f.Phone = phone
 }
 
 // GetPhone Account
 func (f Account) GetPhone() string {
-    return f.phone
+    return f.Phone
 }
 
 // SetPassword Account
 func (f *Account) SetPassword(password string){
-    f.password = password
+    f.Password = password
 }
 
 // GetPassword Account
 func (f Account) GetPassword() string {
-    return f.password
+    return f.Password
 }
 
 // SetDateCreated Account
 func (f *Account) SetDateCreated(date time.Time){  
-     f.dateCreated = date
+     f.Date = date
 }
 
 // GetDateCreated Account
 func (f Account) GetDateCreated() time.Time {
-    return f.dateCreated
+    return f.Date
 }
 
+// SetType Account
+func (f *Account) SetType(typez string){
+     f.Type = typez
+}
+
+// GetType Account
+func (f Account) GetType() string{
+    return f.Type
+}
